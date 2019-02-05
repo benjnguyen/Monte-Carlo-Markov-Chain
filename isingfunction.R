@@ -142,30 +142,3 @@ saveGIF({
     plot(l, main = paste("Current iteration:", i*10000))
   }
 }, interval=0.2, movie.name="anima1.gif")
-
-
-saveGIF({
-  for(i in seq(1,length(a$intermediate),2))
-  {
-    if (i == 1)
-    {
-      l <- levelplot(a$intermediate[[i]], 
-                     col.regions= colorRampPalette(c("red4","blue4")),
-                     colorkey = FALSE,
-                     xlab = "",
-                     ylab = "",
-                     main = paste("Temperature: 0.5"),
-                     sub = paste("Current iteration:", i))
-      plot(l)
-    }
-    l <- levelplot(a$intermediate[[i]], 
-                   col.regions= colorRampPalette(c("red4","blue4")),
-                   colorkey = FALSE,
-                   xlab = "",
-                   ylab = "",
-                   main = paste("Temperature: 0.5"),
-                   sub = paste("Current iteration:", i*10000))
-    plot(l, main = paste("Current iteration:", i*10000))
-  }
-}, interval=0.2, movie.name="anima2.gif")
-
