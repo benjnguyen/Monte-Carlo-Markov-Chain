@@ -142,3 +142,5 @@ saveGIF({
     plot(l, main = paste("Current iteration:", i*10000))
   }
 }, interval=0.2, movie.name="anima1.gif")
+
+
